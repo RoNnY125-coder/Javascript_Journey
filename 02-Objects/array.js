@@ -49,3 +49,17 @@ let r=mhero.concat(dchero);
 console.log(r);                 //merges both the array\
 
 console.log(mhero.join(",")); // converts array to string
+
+//--------------------------------------------------------------------
+
+console.log(Array.isArray("ronny")); // returns boolean value
+console.log(Array.from("ronny"));  //converts string to array
+
+let a=100
+let b=200
+let c=300 
+console.log(Array.of(a,b,c));  // created array with the values
+
+const lmao = [2,2,4[4,32,[234,5,5,4],24,4442,42,2]]
+console.log(lmao.flat(Infinity));
+
