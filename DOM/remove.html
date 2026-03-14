@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM mai Delete</title>
+</head >
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>js</li>
+    </ul>
+    
+</body>
+<script>
+    //addition
+    function addlang(langname) {
+        const addli=document.createElement('li');
+        addli.innerHTML=`${langname}`
+        document.querySelector(".language").appendChild(addli)
+    }
+    addlang("Python")
+    addlang("C++")
+    addlang("Rust")
+
+    //basic idea to add using a function
+    //there is a problem oso , whole tree is to be traversed , so it will be slow , not optimized
+
+
+    //now we use the optimized approach
+
+    function addolang(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addolang("GOLANG")
+
+    //editing
+    const sndlang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')
+    newli.textContent="bigga"
+    sndlang.replaceWith(newli)
+
+    const fstlang=document.querySelector('li:first-child')
+    fstlang.outerHTML='<li>TYPEscript</li>'
+
+    //deletion
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM study</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Friday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);     //can access the inside part and also it have some array like properties 
+    console.log(parent.children[1].innerHTML);    //can see the entire html structure 
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);  
+    }
+    parent.children[1].style.color="red"
+    console.log(parent.firstElementChild);  //access any elment with it
+
+
+    const day1=document.querySelector('.day')
+    console.log(day1);
+    console.log(day1.parentElement);
+    console.log(day1.nextElementSibling);
+
+    // important topic
+    console.log("NODES: ",parent.childNodes);   // even the enter is also consider as the node , thats why it shows 9 instead of just 4 days
+    // even comments have their own meaning aka node
+</script>
+</html>
