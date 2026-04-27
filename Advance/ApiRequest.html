@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bwahahahahhahahhahha</title>
+</head>
+<body style="background-color: black;">
+    
+</body>
+<script>
+    const requesturl="https://api.github.com/users/RoNnY-125coder"  //good practice
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET', requesturl) //takes two parameters
+    //we have to call open 
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr,readyState===4){
+            console.log(this.responseText);
+        }
+    }
+    xhr.send()
+</script>
+</html>
